@@ -13,7 +13,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build Docker image
-        run: test.bat
+        run: |
+          ./test.bat
+        shell: cmd
   xcop-lint:
     runs-on: ubuntu-latest
     steps:
